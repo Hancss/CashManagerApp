@@ -21,7 +21,10 @@ class MainActivity : AppCompatActivity() {
         inicio_pass=findViewById(R.id.inicioPass)
         boton_iniciar=findViewById(R.id.buttonIniciar)*/
 
-
+        val botonIngresoSistema=findViewById<Button>(R.id.buttonIniciar)
+        botonIngresoSistema.setOnClickListener {
+            validarCredenciales()
+        }
 
 
 
@@ -42,9 +45,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun validarCredenciales() {
+        val correoIngresar: EditText = findViewById(R.id.inicioEmail)
+        val passwordIngresar: EditText = findViewById(R.id.inicioPass)
+
+        val correo = correoIngresar.text.toString()
+        val claveIngreso = passwordIngresar.text.toString()
+        if (correo == "css@gmail.com" && claveIngreso == "1234") {
+            val intent = Intent(this, PantallaPrincipal::class.java)
+            startActivity(intent)
+        }else {
+            // Las credenciales son inválidas, mostrar un mensaje de error al usuario
+            Toast.makeText(this, "Correo electrónico o contraseña inválidos", Toast.LENGTH_SHORT).show()}
 
     }
-
-
 
 }
