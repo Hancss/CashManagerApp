@@ -10,16 +10,20 @@
         android:name="com.example.proyectof.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.proyectof.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
+        android:id="@+id/nav_movimientos"
+        android:name="com.example.proyectof.MovimientosFragment"
+        android:label="Movimientos"
+        tools:layout="@layout/fragment_movimientos" />
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.proyectof.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_manejo_cuentas"
+        android:name="com.example.proyectof.ManejoCuentasFragment"
+        android:label="Manejo de Cuentas"
+        tools:layout="@layout/fragment_manejo_cuentas" />
+    <fragment
+        android:id="@+id/nav_reportes"
+        android:name="com.example.proyectof.ReportesFragment"
+        android:label="Reportes"
+        tools:layout="@layout/fragment_reportes" />
+
 </navigation>
