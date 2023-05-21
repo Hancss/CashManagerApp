@@ -21,5 +21,25 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_pantalla_inicio"
-        app:menu="@menu/activity_pantalla_inicio_drawer" />
+
+        >
+
+        <!--
+        app:menu="@menu/activity_pantalla_inicio_drawer"
+         -->
+
+        <ExpandableListView
+            android:id="@+id/expanded_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:layout_marginTop="160dp"
+            android:choiceMode="singleChoice"
+            >
+
+
+        </ExpandableListView>
+    </com.google.android.material.navigation.NavigationView>
+
+
 </androidx.drawerlayout.widget.DrawerLayout>
