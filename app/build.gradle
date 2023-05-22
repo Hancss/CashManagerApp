@@ -7,6 +7,10 @@ android {
     namespace 'com.example.proyectof'
     compileSdk 33
 
+    viewBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.proyectof"
         minSdk 24
@@ -30,9 +34,20 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    def nav_version = "2.5.3"
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    def material_version = "1.9.0"
+    implementation "com.google.android.material:material:$material_version"
+
 
     implementation 'androidx.fragment:fragment-ktx:1.5.7'
     implementation 'androidx.core:core-ktx:1.8.0'

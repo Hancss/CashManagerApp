@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.proyectof.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_firstChild"
+        android:name="com.example.proyectof.ui.inicio.FirstChildFragment"
+        tools:layout="@layout/fragment_menu_inicio"
+        android:label="Opcion 1" />
+    <fragment
+        android:id="@+id/nav_secondChild"
+        android:name="com.example.proyectof.ui.movimientos.SecondChildFragment"
+        tools:layout="@layout/fragment_menu_movimientos"
+        android:label="Opcion 2" />
+    <fragment
+        android:id="@+id/nav_thirdChild"
+        android:name="com.example.proyectof.ui.movimientos.ThirdChildFragment"
+        tools:layout="@layout/fragment_third_child"
+        android:label="Opcion 3" />
+    <fragment
+        android:id="@+id/nav_fourthChild"
+        android:name="com.example.proyectof.ui.movimientos.FourthChildFragment"
+        tools:layout="@layout/fragment_fourth_child"
+        android:label="Opcion 4" />
+    <fragment
+        android:id="@+id/nav_fifthChild"
+        android:name="com.example.proyectof.ui.manejocuentas.FifthChildFragment"
+        tools:layout="@layout/fragment_fifth_child"
+        android:label="Opcion 5" />
+
+    <!--
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.proyectof.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_movimientos"
+        android:name="com.example.proyectof.MovimientosFragment"
+        android:label="Movimientos"
+        tools:layout="@layout/fragment_movimientos" />
+    <fragment
+        android:id="@+id/nav_manejo_cuentas"
+        android:name="com.example.proyectof.ManejoCuentasFragment"
+        android:label="Manejo de Cuentas"
+        tools:layout="@layout/fragment_manejo_cuentas" />
+    <fragment
+        android:id="@+id/nav_reportes"
+        android:name="com.example.proyectof.ReportesFragment"
+        android:label="Reportes"
+        tools:layout="@layout/fragment_reportes" />
+    -->
+</navigation>

@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         val correo = correoIngresar.text.toString()
         val claveIngreso = passwordIngresar.text.toString()
         if (correo == "css@gmail.com" && claveIngreso == "1234") {
-            val intent = Intent(this, PantallaPrincipal::class.java)
+            val intent = Intent(this, PantallaInicioActivity::class.java)
             startActivity(intent)
         }else {
             // Las credenciales son inválidas, mostrar un mensaje de error al usuario
