@@ -8,6 +8,8 @@
     <color name="naranja">#FF9800</color>
     <color name="azul_agua">#FF009688</color>
     <color name="morado">#FFC33FDA</color>
+    <color name="verde">#FF339340</color>
+    <color name="rojo">#FFAF2908</color>
 
     <!-- Material Design Color Palette -->
     <color name="seed">#00b9ec</color>
