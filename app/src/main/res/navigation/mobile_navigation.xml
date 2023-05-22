@@ -38,17 +38,17 @@
     <fragment
         android:id="@+id/nav_menu_gasto"
         android:name="com.example.proyectof.GastoFragment"
-        android:label="fragment_gasto"
+        android:label="Gasto"
         tools:layout="@layout/fragment_gasto" />
     <fragment
         android:id="@+id/nav_menu_ingreso"
         android:name="com.example.proyectof.IngresoFragment"
-        android:label="fragment_ingreso"
+        android:label="Ingreso"
         tools:layout="@layout/fragment_ingreso" />
     <fragment
         android:id="@+id/nav_menu_transferencia"
         android:name="com.example.proyectof.TransferenciaFragment"
-        android:label="fragment_transferencia"
+        android:label="Transferencia"
         tools:layout="@layout/fragment_transferencia" />
 
     <!--
