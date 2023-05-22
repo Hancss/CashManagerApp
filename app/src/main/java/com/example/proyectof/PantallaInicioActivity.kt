@@ -145,7 +145,7 @@ class PantallaInicioActivity : AppCompatActivity() {
             view.isSelected = true
             viewGroup?.setBackgroundColor(Color.parseColor("#FFFFFF"))
             viewGroup = view
-            viewGroup?.setBackgroundColor(Color.parseColor("#2ba89c"))
+            //viewGroup?.setBackgroundColor(Color.parseColor("#2ba89c"))
             drawerLayout.closeDrawer(GravityCompat.START)
 
             when (groupPosition) {
