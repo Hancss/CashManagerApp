@@ -4,6 +4,7 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Spinner
 import android.widget.Toast
 import android.widget.Toast.makeText
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -16,6 +17,7 @@ class PantallaPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
     private lateinit var drawer: DrawerLayout
     private lateinit var  toggle: ActionBarDrawerToggle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pantalla_principal)
@@ -33,6 +35,10 @@ class PantallaPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
+
+        opcionesIngreso=findViewById(R.id.spinner_ingreso)
+
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
