@@ -41,7 +41,7 @@ class PantallaInicioActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarPantallaInicio.toolbar)
 
         binding.appBarPantallaInicio.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+            Snackbar.make(view, "Comparte la información de esta pantalla", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout

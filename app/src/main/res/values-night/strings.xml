@@ -2,4 +2,7 @@
 <resources>
     <string name="password">Password</string>
     <string name="email">Email</string>
+    <string name="sign_in_google">Sign in with Google</string>
+    <string name="cashmanager_logo">CashManager</string>
+    <string name="forgot_pass">Olvidé mi Contraseña</string>
 </resources>
