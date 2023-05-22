@@ -35,6 +35,21 @@
         android:name="com.example.proyectof.ui.manejocuentas.FifthChildFragment"
         tools:layout="@layout/fragment_fifth_child"
         android:label="Opcion 5" />
+    <fragment
+        android:id="@+id/nav_menu_gasto"
+        android:name="com.example.proyectof.GastoFragment"
+        android:label="fragment_gasto"
+        tools:layout="@layout/fragment_gasto" />
+    <fragment
+        android:id="@+id/nav_menu_ingreso"
+        android:name="com.example.proyectof.IngresoFragment"
+        android:label="fragment_ingreso"
+        tools:layout="@layout/fragment_ingreso" />
+    <fragment
+        android:id="@+id/nav_menu_transferencia"
+        android:name="com.example.proyectof.TransferenciaFragment"
+        android:label="fragment_transferencia"
+        tools:layout="@layout/fragment_transferencia" />
 
     <!--
     <fragment
