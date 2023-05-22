@@ -26,11 +26,8 @@ class PantallaInicioActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityPantallaInicioBinding
 
-    private var viewGroup: View? = null
-
     private val headerList: ArrayList<ExpandedMenuModel> = ArrayList()
-    private val childList: HashMap<ExpandedMenuModel, ArrayList<String>> =
-        HashMap()
+    private val childList: HashMap<ExpandedMenuModel, ArrayList<String>> = HashMap()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,11 +41,13 @@ class PantallaInicioActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_pantalla_inicio)
+
         // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        // menu should be considered as top-level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home,
@@ -62,89 +61,32 @@ class PantallaInicioActivity : AppCompatActivity() {
                 R.id.nav_fifthChild
             ), drawerLayout
         )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
         prepareListData()
 
-        //Initialize and Assign ExpandableListView
+        // Initialize and Assign ExpandableListView
         val expandableListView: ExpandableListView = binding.expandedListView
 
-
-        //Set Adapter in ExpandableListView :
+        // Set Adapter in ExpandableListView
         val mMenuAdapter = ExpandedMenuAdapter(this, headerList, childList, expandableListView)
         expandableListView.setAdapter(mMenuAdapter)
 
         expandableListView.choiceMode = ExpandableListView.CHOICE_MODE_SINGLE
 
         expandableListView.setOnGroupClickListener { parent, _, groupPosition, _ ->
-            when (groupPosition) {
-                0 -> {
-                    if (parent.isGroupExpanded(groupPosition)) {
-                        parent.collapseGroup(groupPosition)
-                        parent.collapseGroup(1)
-                        parent.collapseGroup(2)
-                        parent.collapseGroup(3)
-                    } else {
-                        parent.expandGroup(groupPosition)
-                        parent.collapseGroup(1)
-                        parent.collapseGroup(2)
-                        parent.collapseGroup(3)
-                    }
-                }
-
-                1 -> {
-                    if (parent.isGroupExpanded(groupPosition)) {
-                        parent.collapseGroup(groupPosition)
-                        parent.collapseGroup(0)
-                        parent.collapseGroup(2)
-                        parent.collapseGroup(3)
-                    } else {
-                        parent.expandGroup(groupPosition)
-                        parent.collapseGroup(0)
-                        parent.collapseGroup(2)
-                        parent.collapseGroup(3)
-                    }
-                }
-
-                2 -> {
-                    if (parent.isGroupExpanded(groupPosition)) {
-                        parent.collapseGroup(groupPosition)
-                        parent.collapseGroup(0)
-                        parent.collapseGroup(1)
-                        parent.collapseGroup(3)
-                    } else {
-                        parent.expandGroup(groupPosition)
-                        parent.collapseGroup(0)
-                        parent.collapseGroup(1)
-                        parent.collapseGroup(3)
-                    }
-                }
-
-                3 -> {
-                    if (parent.isGroupExpanded(groupPosition)) {
-                        parent.collapseGroup(groupPosition)
-                        parent.collapseGroup(0)
-                        parent.collapseGroup(1)
-                        parent.collapseGroup(2)
-                    } else {
-                        parent.expandGroup(groupPosition)
-                        parent.collapseGroup(0)
-                        parent.collapseGroup(1)
-                        parent.collapseGroup(2)
-                    }
-                }
+            if (parent.isGroupExpanded(groupPosition)) {
+                parent.collapseGroup(groupPosition)
+            } else {
+                parent.expandGroup(groupPosition)
             }
             true
         }
 
-        expandableListView.setOnChildClickListener { parent, view, groupPosition, childPosition, _ ->
-            view.isSelected = true
-            viewGroup?.setBackgroundColor(Color.parseColor("#FFFFFF"))
-            viewGroup = view
-            viewGroup?.setBackgroundColor(Color.parseColor("#2ba89c"))
-            drawerLayout.closeDrawer(GravityCompat.START)
-
+        expandableListView.setOnChildClickListener { _, _, groupPosition, childPosition, _ ->
+            val navController = findNavController(R.id.nav_host_fragment_content_pantalla_inicio)
             when (groupPosition) {
                 0 -> { // Menu Inicio
                     when (childPosition) {
@@ -152,7 +94,7 @@ class PantallaInicioActivity : AppCompatActivity() {
                     }
                 }
 
-                1 -> {  //Menu Movimientos
+                1 -> { // Menu Movimientos
                     when (childPosition) {
                         0 -> navController.navigate(R.id.nav_secondChild)
                         1 -> navController.navigate(R.id.nav_thirdChild)
@@ -160,17 +102,16 @@ class PantallaInicioActivity : AppCompatActivity() {
                     }
                 }
 
-                2 -> {  //Menu Manejo de Cuentas
+                2 -> { // Menu Manejo de Cuentas
                     when (childPosition) {
                         0 -> navController.navigate(R.id.nav_fifthChild)
                         1 -> navController.navigate(R.id.nav_fifthChild)
                         2 -> navController.navigate(R.id.nav_fifthChild)
                         3 -> navController.navigate(R.id.nav_fifthChild)
-
                     }
                 }
 
-                3 -> {  //Menu Reportes
+                3 -> { // Menu Reportes
                     when (childPosition) {
                         0 -> navController.navigate(R.id.nav_fifthChild)
                         1 -> navController.navigate(R.id.nav_fifthChild)
@@ -179,12 +120,12 @@ class PantallaInicioActivity : AppCompatActivity() {
                 }
             }
 
+            drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.pantalla_inicio, menu)
         return true
     }
@@ -195,7 +136,6 @@ class PantallaInicioActivity : AppCompatActivity() {
     }
 
     private fun prepareListData() {
-
         val headerInicio = ExpandedMenuModel()
         headerInicio.itemName = "Inicio"
         headerInicio.itemIcon = R.drawable.ic_menu_home
@@ -216,28 +156,27 @@ class PantallaInicioActivity : AppCompatActivity() {
         headerReportes.itemIcon = R.drawable.ic_menu_reportes
         headerList.add(headerReportes)
 
-        val childInicio = ArrayList<String>()
-        childInicio.add("Inicio")
-        childList[headerInicio] = childInicio
+        val listInicio: ArrayList<String> = ArrayList()
+        listInicio.add("Child Inicio")
+        childList[headerList[0]] = listInicio
 
-        val childMovimientos = ArrayList<String>()
-        childMovimientos.add("Ingreso")
-        childMovimientos.add("Gasto")
-        childMovimientos.add("Transferencias")
-        childList[headerMovimientos] = childMovimientos
+        val listMovimientos: ArrayList<String> = ArrayList()
+        listMovimientos.add("Child Movimientos 1")
+        listMovimientos.add("Child Movimientos 2")
+        listMovimientos.add("Child Movimientos 3")
+        childList[headerList[1]] = listMovimientos
 
-        val childManejoCuentas = ArrayList<String>()
-        childManejoCuentas.add("Consultar Movimientos")
-        childManejoCuentas.add("Agregar Cuenta")
-        childManejoCuentas.add("Cambiar Nombre de la Cuenta")
-        childManejoCuentas.add("Eliminar una Cuenta")
-        childList[headerManejoCuentas] = childManejoCuentas
+        val listManejoCuentas: ArrayList<String> = ArrayList()
+        listManejoCuentas.add("Child Manejo Cuentas 1")
+        listManejoCuentas.add("Child Manejo Cuentas 2")
+        listManejoCuentas.add("Child Manejo Cuentas 3")
+        listManejoCuentas.add("Child Manejo Cuentas 4")
+        childList[headerList[2]] = listManejoCuentas
 
-        val childReportes = ArrayList<String>()
-        childReportes.add("Resumen Mensual")
-        childReportes.add("Últimos Movimientos")
-        childReportes.add("Categorías")
-        childList[headerReportes] = childReportes
-
+        val listReportes: ArrayList<String> = ArrayList()
+        listReportes.add("Child Reportes 1")
+        listReportes.add("Child Reportes 2")
+        listReportes.add("Child Reportes 3")
+        childList[headerList[3]] = listReportes
     }
 }

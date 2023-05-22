@@ -1,6 +1,7 @@
 package com.example.proyectof.ui.expanded
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Typeface
 import android.view.LayoutInflater
 import android.view.View
@@ -23,11 +24,6 @@ class ExpandedMenuAdapter(
     }
 
     override fun getChildrenCount(groupPosition: Int): Int {
-        /*var childCount = 0
-        if (groupPosition == 0 || groupPosition == 1) {
-            childCount = this.mListChild[this.mListHeader[groupPosition]]!!.size
-        }
-        return childCount*/
         return mListChild[mListHeader[groupPosition]]?.size ?: 0
     }
 
@@ -36,7 +32,7 @@ class ExpandedMenuAdapter(
     }
 
     override fun getChild(groupPosition: Int, childPosition: Int): Any {
-        return mListChild[this.mListHeader[groupPosition]]!!.get(childPosition)
+        return mListChild[this.mListHeader[groupPosition]]!![childPosition]
     }
 
     override fun getGroupId(groupPosition: Int): Long {
@@ -66,7 +62,7 @@ class ExpandedMenuAdapter(
         }
 
         val headerName = convertView!!.findViewById(R.id.header_title) as TextView
-        val headerIcon = convertView!!.findViewById(R.id.header_icon) as ImageView
+        val headerIcon = convertView.findViewById(R.id.header_icon) as ImageView
 
         headerName.setTypeface(null, Typeface.NORMAL)
         headerName.text = header.itemName
@@ -86,15 +82,22 @@ class ExpandedMenuAdapter(
         val childText = getChild(groupPosition, childPosition) as String
 
         if (convertView == null) {
-            val inflater = this.mContext
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val inflater = mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             convertView = inflater.inflate(R.layout.list_child_menu, null)
         }
 
-        val childName = convertView!!
-            .findViewById(R.id.child_title) as TextView
+        val childName = convertView?.findViewById(R.id.child_title) as TextView
 
         childName.text = childText
+
+        // Establecer el color de fondo del elemento hijo
+        if (isLastChild) {
+            // Último elemento hijo, sin color de fondo seleccionado
+            convertView?.setBackgroundColor(Color.TRANSPARENT)
+        } else {
+            // Elemento hijo no seleccionado, establecer el color de fondo deseado
+            convertView?.setBackgroundColor(Color.parseColor("#FFFFFF"))
+        }
 
         return convertView
     }
