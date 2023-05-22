@@ -36,7 +36,7 @@ class PantallaPrincipal : AppCompatActivity(), NavigationView.OnNavigationItemSe
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        opcionesIngreso=findViewById(R.id.spinner_ingreso)
+        //opcionesIngreso=findViewById(R.id.spinner_ingreso)
 
 
     }

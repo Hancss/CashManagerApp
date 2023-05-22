@@ -16,46 +16,61 @@
         tools:layout="@layout/fragment_menu_inicio"
         android:label="Opcion 1" />
     <fragment
-        android:id="@+id/nav_secondChild"
-        android:name="com.example.proyectof.ui.movimientos.SecondChildFragment"
-        tools:layout="@layout/fragment_menu_movimientos"
-        android:label="Opcion 2" />
+        android:id="@+id/nav_agregar_cuenta"
+        android:name="com.example.proyectof.AgregarCuentaFragment"
+        android:label="Agregar Cuenta"
+        tools:layout="@layout/fragment_agregar_cuenta" />
     <fragment
-        android:id="@+id/nav_thirdChild"
-        android:name="com.example.proyectof.ui.movimientos.ThirdChildFragment"
-        tools:layout="@layout/fragment_third_child"
-        android:label="Opcion 3" />
+        android:id="@+id/nav_cambiar_nombre"
+        android:name="com.example.proyectof.CambiarNombreFragment"
+        android:label="Cambiar Nombre"
+        tools:layout="@layout/fragment_cambiar_nombre" />
     <fragment
-        android:id="@+id/nav_fourthChild"
-        android:name="com.example.proyectof.ui.movimientos.FourthChildFragment"
-        tools:layout="@layout/fragment_fourth_child"
-        android:label="Opcion 4" />
+        android:id="@+id/nav_categorias"
+        android:name="com.example.proyectof.CategoriasFragment"
+        android:label="Categorías"
+        tools:layout="@layout/fragment_categorias" />
     <fragment
-        android:id="@+id/nav_fifthChild"
-        android:name="com.example.proyectof.ui.manejocuentas.FifthChildFragment"
-        tools:layout="@layout/fragment_fifth_child"
-        android:label="Opcion 5" />
+        android:id="@+id/nav_consultar_movimientos"
+        android:name="com.example.proyectof.ConsultarMovimientosFragment"
+        android:label="Consultar Movimientos"
+        tools:layout="@layout/fragment_consultar_movimientos" />
+    <fragment
+        android:id="@+id/nav_eliminar_cuenta"
+        android:name="com.example.proyectof.EliminarCuentaFragment"
+        android:label="Eliminar Cuenta"
+        tools:layout="@layout/fragment_eliminar_cuenta" />
+    <fragment
+        android:id="@+id/nav_gasto"
+        android:name="com.example.proyectof.GastoFragment"
+        android:label="Gasto"
+        tools:layout="@layout/fragment_gasto" />
+    <fragment
+        android:id="@+id/nav_ingreso"
+        android:name="com.example.proyectof.IngresoFragment"
+        android:label="Ingreso"
+        tools:layout="@layout/fragment_ingreso" />
+    <fragment
+        android:id="@+id/nav_tranferencia"
+        android:name="com.example.proyectof.TransferenciaFragment"
+        android:label="Transferencia"
+        tools:layout="@layout/fragment_transferencia" />
+    <fragment
+        android:id="@+id/nav_resumen_mensual"
+        android:name="com.example.proyectof.ResumenMensualFragment"
+        android:label="Resumen Mensual"
+        tools:layout="@layout/fragment_resumen_mensual" />
+    <fragment
+        android:id="@+id/nav_ultimos_movimientos"
+        android:name="com.example.proyectof.UltimosMovimientosFragment"
+        android:label="Últimos Movimientos"
+        tools:layout="@layout/fragment_ultimos_movimientos" />
 
     <!--
     <fragment
         android:id="@+id/nav_home"
         android:name="com.example.proyectof.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/nav_movimientos"
-        android:name="com.example.proyectof.MovimientosFragment"
-        android:label="Movimientos"
-        tools:layout="@layout/fragment_movimientos" />
-    <fragment
-        android:id="@+id/nav_manejo_cuentas"
-        android:name="com.example.proyectof.ManejoCuentasFragment"
-        android:label="Manejo de Cuentas"
-        tools:layout="@layout/fragment_manejo_cuentas" />
-    <fragment
-        android:id="@+id/nav_reportes"
-        android:name="com.example.proyectof.ReportesFragment"
-        android:label="Reportes"
-        tools:layout="@layout/fragment_reportes" />
+
     -->
 </navigation>

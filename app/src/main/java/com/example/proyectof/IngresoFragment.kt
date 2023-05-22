@@ -12,8 +12,8 @@ class IngresoFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            //param1 = it.getString(ARG_PARAM1)
+            //param2 = it.getString(ARG_PARAM2)
         }
     }
 
@@ -39,8 +39,8 @@ class IngresoFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             IngresoFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    //putString(ARG_PARAM1, param1)
+                    //putString(ARG_PARAM2, param2)
                 }
             }
     }

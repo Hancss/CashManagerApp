@@ -19,7 +19,7 @@
         android:textColor="@color/white"
         android:background="@color/azul"
         android:gravity="center"
-        android:text="INGRESO"
+        android:text="Gasto"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

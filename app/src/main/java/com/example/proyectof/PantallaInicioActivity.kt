@@ -52,14 +52,17 @@ class PantallaInicioActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home,
-                R.id.nav_manejo_cuentas,
-                R.id.nav_movimientos,
-                R.id.nav_reportes,
                 R.id.nav_firstChild,
-                R.id.nav_secondChild,
-                R.id.nav_thirdChild,
-                R.id.nav_fourthChild,
-                R.id.nav_fifthChild
+                R.id.nav_ingreso,
+                R.id.nav_gasto,
+                R.id.nav_tranferencia,
+                R.id.nav_consultar_movimientos,
+                R.id.nav_agregar_cuenta,
+                R.id.nav_cambiar_nombre,
+                R.id.nav_eliminar_cuenta,
+                R.id.nav_resumen_mensual,
+                R.id.nav_ultimos_movimientos,
+                R.id.nav_categorias
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -154,27 +157,27 @@ class PantallaInicioActivity : AppCompatActivity() {
 
                 1 -> {  //Menu Movimientos
                     when (childPosition) {
-                        0 -> navController.navigate(R.id.nav_secondChild)
-                        1 -> navController.navigate(R.id.nav_thirdChild)
-                        2 -> navController.navigate(R.id.nav_fourthChild)
+                        0 -> navController.navigate(R.id.nav_ingreso)
+                        1 -> navController.navigate(R.id.nav_gasto)
+                        2 -> navController.navigate(R.id.nav_tranferencia)
                     }
                 }
 
                 2 -> {  //Menu Manejo de Cuentas
                     when (childPosition) {
-                        0 -> navController.navigate(R.id.nav_fifthChild)
-                        1 -> navController.navigate(R.id.nav_fifthChild)
-                        2 -> navController.navigate(R.id.nav_fifthChild)
-                        3 -> navController.navigate(R.id.nav_fifthChild)
+                        0 -> navController.navigate(R.id.nav_consultar_movimientos)
+                        1 -> navController.navigate(R.id.nav_agregar_cuenta)
+                        2 -> navController.navigate(R.id.nav_cambiar_nombre)
+                        3 -> navController.navigate(R.id.nav_eliminar_cuenta)
 
                     }
                 }
 
                 3 -> {  //Menu Reportes
                     when (childPosition) {
-                        0 -> navController.navigate(R.id.nav_fifthChild)
-                        1 -> navController.navigate(R.id.nav_fifthChild)
-                        2 -> navController.navigate(R.id.nav_fifthChild)
+                        0 -> navController.navigate(R.id.nav_resumen_mensual)
+                        1 -> navController.navigate(R.id.nav_ultimos_movimientos)
+                        2 -> navController.navigate(R.id.nav_categorias)
                     }
                 }
             }
