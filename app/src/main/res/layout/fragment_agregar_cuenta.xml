@@ -20,7 +20,7 @@
         android:layout_marginEnd="8dp"
         android:background="@color/azul_agua"
         android:gravity="center"
-        android:text="AGREGAR CUENTA"
+        android:text="@string/agregar_cuenta_"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"

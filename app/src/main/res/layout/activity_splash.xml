@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gestor de Gastos"
+        android:text="@string/gestor_de_gastos"
         android:textColor="@color/white"
         android:textSize="44sp"
         android:textStyle="bold"

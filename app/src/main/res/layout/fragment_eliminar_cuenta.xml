@@ -20,7 +20,7 @@
         android:layout_marginEnd="8dp"
         android:background="@color/azul_agua"
         android:gravity="center"
-        android:text="ELIMINAR CUENTA"
+        android:text="@string/eliminar_cuenta_"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Seleccionar una cuenta"
+        android:text="@string/seleccionar_una_cuenta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView32" />
@@ -57,7 +57,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="184dp"
         android:layout_marginEnd="8dp"
-        android:text="Eliminar cuenta"
+        android:text="@string/eliminar_cuenta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner6" />

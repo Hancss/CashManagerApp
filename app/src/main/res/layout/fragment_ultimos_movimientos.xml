@@ -20,7 +20,7 @@
         android:layout_marginEnd="8dp"
         android:background="@color/morado"
         android:gravity="center"
-        android:text="ULTIMOS MOVIMIENTOS"
+        android:text="@string/ultimos_movimientos"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Seleccionar cuenta"
+        android:text="@string/seleccionar_cuenta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView37" />
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
-        android:text="Mostrar ultimos 5 movimientos"
+        android:text="@string/mostrar_ultimos_5_movimientos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner8" />

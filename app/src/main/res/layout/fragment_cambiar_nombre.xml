@@ -20,7 +20,7 @@
         android:layout_marginEnd="8dp"
         android:background="@color/azul_agua"
         android:gravity="center"
-        android:text="CAMBIAR NOMBRE CUENTA"
+        android:text="@string/cambiar_nombre_cuenta"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Selecciona una cuenta"
+        android:text="@string/selecciona_una_cuenta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
@@ -57,7 +57,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Ingresa el nuevo nombre:"
+        android:text="@string/ingresa_el_nuevo_nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner5" />
@@ -71,7 +71,7 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="text"
-        android:text="escribir el nombre"
+        android:text="@string/escribir_el_nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:text="Cambiar"
+        android:text="@string/cambiar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText9" />

@@ -14,56 +14,56 @@
         android:id="@+id/nav_firstChild"
         android:name="com.example.proyectof.ui.inicio.FirstChildFragment"
         tools:layout="@layout/fragment_menu_inicio"
-        android:label="Inicio" />
+        android:label="@string/inicio" />
     <fragment
         android:id="@+id/nav_agregar_cuenta"
         android:name="com.example.proyectof.AgregarCuentaFragment"
-        android:label="Agregar Cuenta"
+        android:label="@string/agregar_cuenta"
         tools:layout="@layout/fragment_agregar_cuenta" />
     <fragment
         android:id="@+id/nav_cambiar_nombre"
         android:name="com.example.proyectof.CambiarNombreFragment"
-        android:label="Cambiar Nombre"
+        android:label="@string/cambiar_nombre"
         tools:layout="@layout/fragment_cambiar_nombre" />
     <fragment
         android:id="@+id/nav_categorias"
         android:name="com.example.proyectof.CategoriasFragment"
-        android:label="Categorías"
+        android:label="@string/categor_as"
         tools:layout="@layout/fragment_categorias" />
     <fragment
         android:id="@+id/nav_consultar_movimientos"
         android:name="com.example.proyectof.ConsultarMovimientosFragment"
-        android:label="Consultar Movimientos"
+        android:label="@string/consultar_movimientos"
         tools:layout="@layout/fragment_consultar_movimientos" />
     <fragment
         android:id="@+id/nav_eliminar_cuenta"
         android:name="com.example.proyectof.EliminarCuentaFragment"
-        android:label="Eliminar Cuenta"
+        android:label="@string/eliminar_cuenta"
         tools:layout="@layout/fragment_eliminar_cuenta" />
     <fragment
         android:id="@+id/nav_gasto"
         android:name="com.example.proyectof.GastoFragment"
-        android:label="Gasto"
+        android:label="@string/gasto"
         tools:layout="@layout/fragment_gasto" />
     <fragment
         android:id="@+id/nav_ingreso"
         android:name="com.example.proyectof.IngresoFragment"
-        android:label="Ingreso"
+        android:label="@string/ingreso"
         tools:layout="@layout/fragment_ingreso" />
     <fragment
         android:id="@+id/nav_tranferencia"
         android:name="com.example.proyectof.TransferenciaFragment"
-        android:label="Transferencia"
+        android:label="@string/transferencia"
         tools:layout="@layout/fragment_transferencia" />
     <fragment
         android:id="@+id/nav_resumen_mensual"
         android:name="com.example.proyectof.ResumenMensualFragment"
-        android:label="Resumen Mensual"
+        android:label="@string/resumen_mensual"
         tools:layout="@layout/fragment_resumen_mensual" />
     <fragment
         android:id="@+id/nav_ultimos_movimientos"
         android:name="com.example.proyectof.UltimosMovimientosFragment"
-        android:label="Últimos Movimientos"
+        android:label="@string/ltimos_movimientos"
         tools:layout="@layout/fragment_ultimos_movimientos" />
 
     <!--
