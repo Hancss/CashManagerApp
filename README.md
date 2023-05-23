@@ -49,3 +49,7 @@ Contraseña:
 
 1234
 
+----
+En el repositorio se encuentra la apk
+
+[Link de la carpeta donde se encuentra el video:](https://drive.google.com/drive/folders/1WnOaByNeC9jGdwShVBe-a_eM9vyUJJVt?usp=share_link)
