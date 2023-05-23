@@ -22,6 +22,10 @@ android {
     }
 
     buildTypes {
+        debug{
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -36,6 +40,26 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+    flavorDimensions 'price'
+
+    productFlavors{
+        free{
+            applicationId "org.bedu.buildvariant.free"
+            dimension "price"
+            applicationIdSuffix ".free"
+            versionNameSuffix "-free"
+        }
+        paid{
+            applicationId "org.bedu.buildvariant.paid"
+            dimension "price"
+            applicationIdSuffix ".paid"
+            versionNameSuffix "-full"
+            /*
+	    minSdkVersion 23
+            versionCode 3  + android.defaultConfig.versionCode
+	    */
+        }
     }
 }
 

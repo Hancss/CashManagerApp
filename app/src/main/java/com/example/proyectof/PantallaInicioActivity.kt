@@ -52,7 +52,7 @@ class PantallaInicioActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home,
-                R.id.nav_firstChild,
+                R.id.nav_inicio,
                 R.id.nav_ingreso,
                 R.id.nav_gasto,
                 R.id.nav_tranferencia,
@@ -151,7 +151,7 @@ class PantallaInicioActivity : AppCompatActivity() {
             when (groupPosition) {
                 0 -> { // Menu Inicio
                     when (childPosition) {
-                        0 -> navController.navigate(R.id.nav_firstChild)
+                        0 -> navController.navigate(R.id.nav_inicio)
                     }
                 }
 
